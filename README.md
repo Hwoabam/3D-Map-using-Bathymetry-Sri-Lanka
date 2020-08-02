@@ -1,6 +1,6 @@
 # 3D-Map-using-Bathymetry-Sri-Lanka
 A brief tutorial using Bathymetry data for 3D Map Generation.
-
+![Demo1](https://github.com/Hwoabam/3D-Map-using-Bathymetry-Sri-Lanka/blob/master/Media/Animation/SL_bathy.gif)
 
 Numerous packages which required for the 3D map generation which are installed and loaded into the program. These packages avail the functions such as Plotting of points, shading, conversion of GIS data, validating GDAL operations,etc. 
 ```{r}
@@ -17,8 +17,9 @@ windowsize=c(12,8)
 pb_elevation = raster("D:/Assam maps/New Folder/bengal/south india and sri lanka.TIF")
 height_shade(raster_to_matrix(pb_elevation)) %>%
   plot_map()
-
 ```
+![Bathymetry Heatmap](https://github.com/Hwoabam/3D-Map-using-Bathymetry-Sri-Lanka/blob/master/Media/Plots/Bathy_data.png)
+
 The coordinate reference of the elevation data matched to the imagery data
 ```{r}
 
@@ -65,6 +66,8 @@ render_scalebar(limits=c(0,50,100),label_unit = "km",position = "S", y=50,scale_
 render_compass(position = "W" )
 render_snapshot(title_text = "Sri Lanka geographical|Bathymetry",title_bar_color = "#1f5214", title_color = "white", title_bar_alpha = 1)
 ```
+![Bathymetry Heatmap](https://github.com/Hwoabam/3D-Map-using-Bathymetry-Sri-Lanka/blob/master/Media/Snapshots/SnapSL.png)
+
 A 24 second video is generated of the animation of the rotation of the plot using ffmpeg function at framerate of 60fps.
 ```{r}
 angles= seq(0,360,length.out = 1441)[-1]
