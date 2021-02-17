@@ -14,7 +14,7 @@ The Bathymetry data for is downloaded from National Oceanic Atmosphere Administr
 ```{r fig1, fig.height = 15, fig.width = 10, align= "center"}
 windowsize=c(12,8)
 
-pb_elevation = raster("D:/Assam maps/New Folder/bengal/south india and sri lanka.TIF")
+pb_elevation = raster(File location"/south india and sri lanka.TIF")
 height_shade(raster_to_matrix(pb_elevation)) %>%
   plot_map()
 ```
